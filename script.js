@@ -32,7 +32,7 @@ var MovieTitle = React.createClass({
 
     render: function () {
         return (
-            React.createElement('h2', {}, this.props.title.title)
+            React.createElement('h2', {}, this.props.title)
         )
     }
 })
@@ -44,7 +44,7 @@ var MovieDesc = React.createClass({
 
     render: function () {
         return (
-            React.createElement('p', {}, this.props.desc.desc)
+            React.createElement('p', {}, this.props.desc)
         )
     }
 })
@@ -55,7 +55,7 @@ var MovieImage = React.createClass({
     },
 
     render: function () {
-        return (React.createElement('img', { src: this.props.image.src })
+        return (React.createElement('img', { src: this.props.image })
         )
     }
 })
@@ -68,9 +68,9 @@ var Movie = React.createClass({
     render: function () {
         return (
             React.createElement('li', { key: this.props.movie.id },
-                React.createElement(MovieTitle, { title: this.props.movie }),
-                React.createElement(MovieDesc, { desc: this.props.movie }),
-                React.createElement(MovieImage, { image: this.props.movie }),
+                React.createElement(MovieTitle, { title: this.props.movie.title }),
+                React.createElement(MovieDesc, { desc: this.props.movie.desc }),
+                React.createElement(MovieImage, { image: this.props.movie.src }),
             ))
     }
 })
