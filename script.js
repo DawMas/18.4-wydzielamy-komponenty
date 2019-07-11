@@ -67,7 +67,7 @@ var Movie = React.createClass({
 
     render: function () {
         return (
-            React.createElement('li', { key: this.props.movie.id },
+            React.createElement('li', {},
                 React.createElement(MovieTitle, { title: this.props.movie.title }),
                 React.createElement(MovieDesc, { desc: this.props.movie.desc }),
                 React.createElement(MovieImage, { image: this.props.movie.src }),
